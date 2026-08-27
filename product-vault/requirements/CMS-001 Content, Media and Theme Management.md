@@ -42,7 +42,7 @@ An authorised Srasveda admin updates product photos, decks, approved copy, homep
 - Ordinary photo/copy/theme updates publish through [[domain/Content Publication]] and revalidate affected pages/CDN cache; no code deployment is required.
 - Product claims, ingredients, regulatory facts, doctor quotes/logos and public reviews require their designated approval before publication.
 - Admins cannot publish arbitrary JavaScript, CSS, tracking scripts or a new page layout through this system.
-- A code/design deployment remains required for a new feature, page type, checkout behaviour or design component.
+- A code/design deployment remains required for a new feature, page type, checkout behaviour or a [[requirements/DS-CORE Shared UI System]] component. Theme colour changes bind token slots; they do not add components.
 
 ## Permissions
 

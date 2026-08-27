@@ -5,7 +5,7 @@ status: draft
 
 # User Account
 
-The authenticated identity created or activated by phone OTP. An account is separate from the business profile it may later be authorised to access.
+The authenticated identity created or activated by phone OTP. An account is separate from the business profile it may later be authorised to access. Session mechanics are [[domain/Auth Session]] (reusable). Role mapping is the host.
 
 ## States
 

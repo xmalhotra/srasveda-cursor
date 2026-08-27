@@ -3,6 +3,7 @@ type: screen-spec
 id: UI-DOC-001
 status: draft
 roles: [doctor]
+figma: https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=46-3
 ---
 
 # UI-DOC-001 — Doctor Home: Professional Resources
@@ -14,7 +15,8 @@ Give a doctor quick access to approved product information, their relationship s
 ## Page structure
 
 ```text
-Header: Srasveda Professional | Support | Notifications | Profile
+Header: Srasveda | Profile avatar
+Bottom navigation: Resources | Orders | Support | Profile
 
 Welcome: Dr [Name] | [Primary clinic, if approved]
 
@@ -31,7 +33,6 @@ ORDERS & REQUESTS
 OPTIONAL: MY PRODUCT ACTIVITY
   Only approved, factual sample/resource history
 
-Bottom navigation: Resources | Orders | Support | Profile
 ```
 
 ## Behaviour and boundaries
@@ -46,9 +47,19 @@ Bottom navigation: Resources | Orders | Support | Profile
 
 - Other doctors/clinics, internal priority or ranking, sales commission/attribution, MR checklist/tasks, customer identities/orders, or the full partner network.
 
-## States to design later
+## Designed states
 
-- Pending doctor-role verification; no assigned MR; no eligible resources; no order history.
+| State | Frame |
+| --- | --- |
+| Resources | [Resources](https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=46-3) |
+| Empty | [Resources — empty](https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=46-135) |
+| Pending verification | [Resources — pending](https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=46-203) |
+| Loading | [Resources — loading](https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=46-260) |
+| No assigned MR | [Resources — no assigned MR](https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=48-927) |
+| Resource detail | [Resource detail](https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=47-288) |
+| Support | [Support](https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=48-690) |
+| Profile | [Profile](https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=48-790) |
+| Access denied | [Access denied](https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=48-900) |
 
 ## Links
 

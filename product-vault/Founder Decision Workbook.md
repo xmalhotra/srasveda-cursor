@@ -16,7 +16,7 @@ This is the shortest path from a good blueprint to build-ready specifications. E
 | D-02 | Doctor attribution | Use a unique doctor link or code; direct purchases remain unattributed. Admin corrections require reason and audit. | Pending |
 | D-03 | Discount policy | Start only with explicitly approved campaign and doctor-specific customer codes, with dates/limits. Do not allow ad-hoc MR discounts. | Pending |
 | D-04 | Fulfilment owner | Internal Srasveda delivery handles launch fulfilment. Delivery staff upload proof/receipt to the order dashboard. | Approved 2026-08-09 |
-| D-05 | Customer policies | Publish delivery area/charge, estimated dispatch time, cancellation cut-off, return eligibility and refund method before checkout. | Pending |
+| D-05 | Customer policies | Publish delivery area/charge, estimated dispatch time, cancellation cut-off, return eligibility and refund method before checkout. **Process locked in ORD-004:** customer/doctor may request in the app or by message; admin decides; refund is manual after payout. Cut-off days and sealed-product rules still pending. | Pending (process locked) |
 
 ## B. Doctor onboarding and MR automation
 

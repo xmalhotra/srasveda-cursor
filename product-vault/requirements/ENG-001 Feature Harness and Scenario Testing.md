@@ -14,26 +14,30 @@ Every feature can be changed, tested and released without accidentally breaking 
 
 ## Architecture rule: isolated vertical slices
 
-Use one deployed Next.js application and one controlled database at first—a **modular monolith**, not many separately deployed services. Each feature remains isolated in its own folder/package boundary.
+Use one deployed Next.js application and one controlled database at first—a **modular monolith**, not many separately deployed services. Platform cores and host features stay in their own folder/package boundary.
 
 ```text
+src/modules/ds-core/       shared UI system (tokens + primitives)
+src/modules/auth-core/     phone OTP session
+src/modules/pay-core/      hosted payment adapter
 src/features/<feature>/
   domain/          business rules and types
   application/     commands, queries and use cases
   infrastructure/  database/provider adapters
-  ui/              role-specific screens/components
+  ui/              role-specific screens (compose DS-CORE; do not copy it)
   contracts/       public feature API/events only
   harness/         fixtures, unit/integration/permission tests
   README.md        scope, linked vault requirement and ownership
 ```
 
-Examples: `orders`, `doctor-journey`, `consultation-routing`, `support`, `content`, `identity` and `whatsapp`.
+Examples of host features: `orders`, `doctor-journey`, `consultation-routing`, `support`, `content`, `mr`, `customer`, `admin`. Identity session and payment confirmation are cores, not copies inside those features.
 
 ## Boundary rules
 
 - A feature may use another feature only through its documented contracts/events—not by reaching directly into its private database/repository/UI internals.
+- Shared chrome is [[requirements/DS-CORE Shared UI System]]. Role screens import it. They do not copy Button/Field, and they do not take primitives from another role’s `ui/` folder.
 - Each feature owns its writes and business invariants. Cross-feature effects use explicit commands/events, for example `order.delivered` or `sample.issued`.
-- Shared utilities are small and neutral: authentication primitives, audit logging, provider interfaces, design tokens and test helpers. Do not create a catch-all `utils` business layer.
+- Shared utilities besides DS-CORE / AUTH-CORE / PAY-CORE stay small and neutral: audit logging, provider interfaces and test helpers. Do not create a catch-all `utils` business layer.
 - Do not split into microservices initially. A new service is considered only when operational scale, security isolation or independent deployment genuinely requires it.
 
 ## Required feature harness
@@ -68,3 +72,5 @@ A feature cannot be marked `verified` or released until its harness passes in a 
 
 - [[tests/SCN-001 Full Business Simulation]]
 - [[tests/MR-001 Complete Doctor Visit Test]]
+- [[requirements/DS-CORE Shared UI System]]
+- [[decisions/ADR-003 Shared UI System Module]]

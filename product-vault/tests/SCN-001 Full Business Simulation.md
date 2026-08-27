@@ -36,8 +36,8 @@ All names, numbers, products, payments and messages are synthetic test data.
 2. Admin assigns Handler Dev.
 3. Handler Dev sees only this assigned order, records authorised delivery checkpoint and uploads synthetic receipt/proof.
 4. Dr Kavita sees only her order status and approved receipt/proof.
-5. Doctor requests cancellation; harness asserts it is a request only.
-6. Admin accepts/rejects it with reason; harness asserts append-only audit event.
+5. Doctor requests cancellation in the app; harness asserts it is a request only and the order stage is unchanged.
+6. Admin accepts/rejects it with reason; harness asserts append-only audit event. Accept of a paid cancel does not create `refunded` until ops records payout.
 7. Handler Dev is denied price change/cancellation and cannot open an unassigned order.
 
 ## Scenario C — customer direct order, payment, delivery and WhatsApp
@@ -48,6 +48,8 @@ All names, numbers, products, payments and messages are synthetic test data.
 4. WhatsApp simulator asserts one approved utility-template event per eligible order status; duplicate provider/webhook retries do not duplicate messages.
 5. WhatsApp send failure is recorded but does not roll back order status.
 6. Riya can view only her order timeline; all other personas are denied customer-order details unless permission explicitly allows a limited signal.
+7. Riya submits cancel in the app; harness asserts an after-sales request only, an admin action-centre item, and unchanged order stage. A second submit is blocked.
+8. Admin reject leaves the order unchanged. Admin accept of a paid cancel does not refund until ops records payout with evidence. A WhatsApp-filed ask uses the same queue.
 
 ## Scenario D — private consultation request
 

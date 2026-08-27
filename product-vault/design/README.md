@@ -2,6 +2,8 @@
 
 Figma is the visual source of truth; this folder is the machine-readable and product-readable link between Figma and requirements.
 
+The shared chrome is a platform module: [[requirements/DS-CORE Shared UI System]]. Role screens compose it.
+
 ## UI work cannot start from theme alone
 
 Each screen must link to:
@@ -33,8 +35,8 @@ Every implemented screen is designed for default, loading, empty, validation err
 
 ## Pending
 
-The Srasveda visual direction and design tokens are intentionally not chosen yet. They require review of current logo, packaging, product photography and approved content.
+Srasveda token **values** (cream, forest, sage, Inter, Cormorant wordmark) are locked in the current Figma file. Admin may later override named colours through [[domain/Theme Setting]] / CMS-001. New component types remain a DS-CORE change, not a theme publish.
 
 ## Current structural wireframes
 
-The editable first-pass application wireframes are tracked in [[Figma Wireframe Inventory]]. The Figma Starter plan limits the file to three pages, so it groups the planned areas without changing the required future handoff structure above.
+The editable application wireframes are tracked in [[Figma Wireframe Inventory]]. Shared chrome is page [`08 DS-CORE — Shared UI`](https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=64-2).

@@ -23,3 +23,4 @@ An internal management record automatically created when a logged-in user choose
 - Tickets are manually closed; a WhatsApp conversation or elapsed time cannot close one automatically.
 - A ticket stores only minimum context. It must not collect medical/patient details or copy unrestricted chat content into the platform.
 - If no assigned MR exists for a doctor, the ticket routes to management's fallback queue and the contact route follows the approved fallback policy.
+- An after-sales request may create or link a ticket for the admin worklist. Ticket status is still not shown to the requester. The customer-safe signal is on the order: request received / decision. See [[domain/After-sales Request]].

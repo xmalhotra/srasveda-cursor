@@ -3,6 +3,7 @@ type: screen-spec
 id: UI-ADM-004
 status: draft
 roles: [admin, content-editor, product-regulatory-approver, commercial-admin]
+figma: https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=50-3439
 ---
 
 # UI-ADM-004 — Admin Product Workspace

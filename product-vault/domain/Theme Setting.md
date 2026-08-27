@@ -5,7 +5,7 @@ status: draft
 
 # Theme Setting
 
-A constrained brand setting an admin can safely update without breaking the application design.
+A constrained brand setting an admin can safely update without breaking the application design. Values bind to [[requirements/DS-CORE Shared UI System]] token slots.
 
 ## Editable
 
@@ -14,7 +14,7 @@ A constrained brand setting an admin can safely update without breaking the appl
 ## Not dashboard-editable
 
 - Arbitrary CSS/JavaScript, layout logic, checkout/payment behaviour, permissions or security settings.
-- New page/component types; these require design and code deployment.
+- New page/component types; these require a [[requirements/DS-CORE Shared UI System]] change and code deployment.
 
 ## Rules
 

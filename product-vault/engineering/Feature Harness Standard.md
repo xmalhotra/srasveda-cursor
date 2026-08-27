@@ -6,6 +6,17 @@ related: [[requirements/ENG-001 Feature Harness and Scenario Testing]]
 
 # Feature Harness Standard
 
+## Platform cores
+
+```text
+src/modules/ds-core/          tokens, Button, Field, shell
+src/modules/auth-core/
+src/modules/pay-core/
+src/features/<host-feature>/  composes DS-CORE in ui/
+```
+
+Role `ui/` files import DS-CORE. They do not define a second Button.
+
 ## Example: orders feature
 
 ```text

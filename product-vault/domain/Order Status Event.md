@@ -16,8 +16,10 @@ awaiting-payment → payment-confirmed → order-confirmed → packed → dispat
 Alternative/end states:
 
 ```text
-payment-failed | payment-expired | cancelled | return-requested → return-received → refund-pending → refunded
+payment-failed | payment-expired | cancelled | refunded
 ```
+
+`return-requested` is not an order stage. The ask is an [[domain/After-sales Request]] (`cancel` | `return` | `other`). Admin accept may append `cancelled` (or an authorised return-accepted event). `refunded` is appended only after operations has paid the money and records it. There is no automated `refund-pending` pipeline.
 
 ## Required event fields
 
@@ -31,6 +33,6 @@ payment-failed | payment-expired | cancelled | return-requested → return-recei
 
 - Events are append-only. Corrections add a new authorised event; history is never silently rewritten.
 - Valid transitions are enforced. For example, an order cannot become `dispatched` before it is confirmed/accepted for fulfilment.
-- Payment confirmation is created only from a verified server-side gateway callback or approved reconciliation—not browser success UI.
+- Payment confirmation is created only from a verified server-side gateway callback or approved reconciliation—not browser success UI. The payable itself is [[domain/Payment Intent]] (reusable); this object is the Srasveda order timeline.
 - Each eligible event has an idempotency key, so a retry/provider webhook cannot create duplicate stages or WhatsApp notifications.
 - Customer status uses plain language; internal logistics detail stays internal.

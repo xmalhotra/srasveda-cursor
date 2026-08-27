@@ -7,7 +7,7 @@ owner: founder-and-mr-review
 roles: [MR, Admin]
 workflows: [[workflows/WF-MR-001 Clinic Visit]]
 domain: [[domain/Doctor]], [[domain/Visit]], [[domain/Sample]], [[domain/Follow-up]]
-screens: [UI-MR-05-pending]
+screens: [[design/screens/MR Home — Today]], [[design/screens/MR Doctor Detail]], [[design/screens/MR Log Visit]]
 tests: [[tests/MR-001 Complete Doctor Visit Test]]
 decisions: [[decisions/ADR-001 Version One Boundary]]
 ---
@@ -71,7 +71,7 @@ On successful completion:
 
 ## UX contract
 
-- Screen: `UI-MR-05 Log Visit` — not yet designed.
+- Screens: [[design/screens/MR Doctor Detail]], [[design/screens/MR Log Visit]] (Figma structural draft on Journeys page).
 - Required states: default, no assigned doctor/access denied, validation errors, saving, saved, server error, offline behaviour decision pending.
 - Phone: single-column, quick-entry form.
 - Tablet: same form; no extra desktop-only fields.
@@ -97,3 +97,4 @@ On successful completion:
 | Date | Change | Why | Author/approver |
 |---|---|---|---|
 | 2026-08-08 | Initial feature contract created | Begin specification process | Codex / pending founder-MR review |
+| 2026-08-26 | Linked UI-MR-001 / 003 / 05 Figma drafts | MR core wireframes started on Journeys page | Cursor agent / pending founder-MR review |

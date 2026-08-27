@@ -28,6 +28,8 @@ Any logged-in user can ask for help through the correct familiar contact route. 
 3. The application opens the approved WhatsApp/call contact route with minimal, approved prefilled context.
 4. Management/assigned support staff receive the internal alert and use the support worklist to own, note and manually close the ticket.
 
+Order cancel/return is not this Support click. That is an [[domain/After-sales Request]] from the order (`Request cancel or return`) or a message that ops files against the order. Both land in the admin action centre. See [[requirements/ORD-004 Manual After-sales]]. A support ticket may be linked for the worklist; the requester still has no ticket portal.
+
 ## Privacy and visibility rules
 
 - No ticket receipt, status change, assignment, reminder, internal note or closure notification is sent to the user through the platform.
@@ -56,3 +58,4 @@ Any logged-in user can ask for help through the correct familiar contact route. 
 - [[workflows/WF-SUP-001 Support Request]]
 - [[domain/Support Ticket]]
 - [[requirements/UX-001 Role-based Application Experience]]
+- [[requirements/ORD-004 Manual After-sales]]

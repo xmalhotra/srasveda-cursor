@@ -20,3 +20,5 @@ flowchart TD
 ```
 
 The requester does not see the internal ticket lifecycle and receives no ticket-status notifications from the platform.
+
+Cancel/return on an order is [[workflows/WF-ORD-004 Manual After-sales]], not this Support click. Both may share a linked internal ticket.

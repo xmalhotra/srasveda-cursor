@@ -3,6 +3,7 @@ type: screen-spec
 id: UI-MR-001
 status: draft
 roles: [mr]
+figma: https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=16-19
 ---
 
 # UI-MR-001 — MR Home: Today
@@ -65,15 +66,20 @@ BOTTOM NAVIGATION
 
 - Other MR territories, global doctor list, private referral routing, price control, other MR performance, patient/medical data or unapproved claims.
 
-## States to design later
+## States drawn
 
-- New MR with no assigned doctors.
-- Task due today; overdue task; all work complete.
-- Doctor reassigned while an old task remains in history.
-- No internet / save pending, if offline entry is approved.
+| State | Figma frame |
+|---|---|
+| Default priorities | [Today](https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=16-19) |
+| Empty / all caught up | [Today — empty](https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=17-2) |
+
+Still to draw: new-MR with zero assigned doctors; doctor reassigned with a leftover historical task. Offline is drawn on Log visit (complete disabled).
 
 ## Links
 
 - [[requirements/DOR-001 Doctor Onboarding and Relationship Playbook]]
 - [[domain/Automated MR Task]]
 - [[requirements/MR-001 Complete Doctor Visit]]
+- [[design/screens/MR My Doctors]]
+- [[design/screens/MR Doctor Detail]]
+- [[design/screens/MR Log Visit]]

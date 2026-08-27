@@ -21,7 +21,7 @@ status: active
 | OQ-012 | What priority rule applies when several eligible partners serve one zone? | Makes routing fair, explainable and auditable | Founder | CON-001 approval |
 | OQ-013 | Which clinics/doctors are referral-eligible, and who can suspend that status? | Protects customer experience and network quality | Founder/operations | CON-001 approval |
 | OQ-014 | What customer-facing wording/disclosure is approved for a partner connection that is not a clinical ranking? | Prevents misleading representation | Legal/compliance | CON-001 approval |
-| OQ-015 | Which tax, delivery, cancellation and return rules apply to direct customer orders? | Defines checkout | Finance/operations | ORD-001 approval |
+| OQ-015 | Which tax, delivery, cancellation and return rules apply to direct customer orders? | Defines checkout | Finance/operations | ORD-001 approval. **Channel/control locked in ORD-004:** in-app or message request; admin decides; refund is manual. Cut-off days still open. |
 | OQ-016 | What facts qualify a doctor for network onboarding, and who approves the final addition? | Defines onboarding checklist and access | Founder/sales operations | DOR-001 approval |
 | OQ-017 | Which exact sample limits, feedback cadence and escalation rules vary by product or doctor tier? | Makes automation safe and useful | Founder/MRs | DOR-001 approval |
 | OQ-018 | What sales signal should trigger each checkpoint: attributed customer orders, clinic orders, value, units, repeat rate, or a combination? | Defines sales-based tasks and reporting | Founder/finance | DOR-001 approval |

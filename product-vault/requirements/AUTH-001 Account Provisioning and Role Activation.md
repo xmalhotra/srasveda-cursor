@@ -8,6 +8,10 @@ priority: foundation
 
 # AUTH-001 — Account Provisioning and Role Activation
 
+Srasveda **host adapter** for [[requirements/AUTH-CORE Phone OTP Session]]. The module proves the mobile. This requirement assigns doctor/customer/staff workspaces.
+
+See [[decisions/ADR-002 Reusable Auth and Payment Modules]].
+
 ## User outcome
 
 Srasveda can prepare a doctor's account and journey before the doctor first logs in. A person who signs up independently is safe by default as a customer; an authorised admin can later verify and promote/link that same account to the doctor profile without losing their customer data.
@@ -59,3 +63,6 @@ Srasveda can prepare a doctor's account and journey before the doctor first logs
 - [[domain/User Account]]
 - [[domain/Account Role Assignment]]
 - [[domain/Doctor Journey Assignment]]
+- [[design/screens/Auth Sign in and Sign out]]
+- [[requirements/AUTH-CORE Phone OTP Session]]
+- [[decisions/ADR-002 Reusable Auth and Payment Modules]]

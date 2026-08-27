@@ -7,7 +7,7 @@ owner: founder-operations-review
 roles: [Doctor, MR, Admin, Distributor]
 workflows: [[workflows/WF-ORD-002 Doctor Clinic Reorder]]
 domain: [[domain/Doctor]], [[domain/Clinic Hospital]], [[domain/Doctor Clinic Order]], [[domain/Doctor MR Assignment]]
-screens: [pending]
+screens: [[design/screens/Doctor Order Detail — Receipt and Delivery]], [[design/screens/After-sales Request]]
 tests: [pending]
 ---
 
@@ -31,7 +31,7 @@ A doctor/clinic can request a **stock-restock supply order**. The order is attri
 
 | Role | May view | May change |
 | --- | --- | --- |
-| Dedicated doctor / clinic account | Only its own order summary, order receipt, delivery receipt/proof and customer-safe status timeline | May submit an approved support/cancellation request; cannot directly alter order data |
+| Dedicated doctor / clinic account | Only its own order summary, order receipt, delivery receipt/proof and customer-safe status timeline | May submit an in-app or message after-sales request; cannot directly alter order data |
 | Assigned order handler | Only assigned order(s), fulfilment/delivery fields and required delivery proof | Record packing/delivery checkpoints and upload proof; cannot change price, discount, order ownership or historical attribution |
 | Admin / authorised operations | All required order, receipt, assignment and audit records | Assign handler, approve/reject cancellation, correct authorised exceptions and manage fulfilment status with reason/audit |
 | MR | Only policy-permitted attributed order signal | No direct fulfilment, price or cancellation authority by default |
@@ -40,7 +40,7 @@ A doctor/clinic can request a **stock-restock supply order**. The order is attri
 
 - Cancellation, price/discount correction, order reassignment, refund/return decision and any exception requires an authorised admin action, reason and audit entry.
 - Admin correction adds an authorised event; it must not silently rewrite the original receipt, delivery proof, price snapshot or historical status.
-- A cancellation request is not a cancellation until admin accepts it under the approved policy.
+- A cancellation/return request is not a cancellation until admin accepts it. Refund is recorded after ops has paid it. Same contract as [[requirements/ORD-004 Manual After-sales]].
 
 ## Open questions
 

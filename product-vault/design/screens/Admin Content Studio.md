@@ -3,6 +3,7 @@ type: screen-spec
 id: UI-ADM-003
 status: draft
 roles: [admin, content-editor, compliance-reviewer]
+figma: https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=50-3366
 ---
 
 # UI-ADM-003 — Admin Content Studio

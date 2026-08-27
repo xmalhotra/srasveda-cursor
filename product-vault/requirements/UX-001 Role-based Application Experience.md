@@ -10,7 +10,7 @@ priority: phase-1
 
 ## Principle
 
-All users enter the same `srasveda.com` application, but see a role-specific home and only the information/actions they need. Shared records do not mean shared visibility.
+All users enter the same `srasveda.com` application, but see a role-specific home and only the information/actions they need. Shared records do not mean shared visibility. Shared chrome is [[requirements/DS-CORE Shared UI System]].
 
 ## Customer home
 
@@ -86,3 +86,4 @@ The admin should oversee the system through exceptions and operational decisions
 - [[domain/Doctor Relationship Playbook]]
 - [[requirements/CON-001 Consultation Request and Private Partner Routing]]
 - [[requirements/DOR-001 Doctor Onboarding and Relationship Playbook]]
+- [[requirements/DS-CORE Shared UI System]]

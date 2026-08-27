@@ -84,15 +84,17 @@ flowchart TD
 - One responsive web application at `srasveda.com`.
 - MRs use phones now and tablets later.
 - Public, MR and admin areas share a platform but have separate permissions.
-- Phone OTP is primary login; email is optional.
+- Shared chrome is the reusable [[requirements/DS-CORE Shared UI System]] module. Role workspaces and Auth/Payment import it; they do not copy Button/Field. See [[decisions/ADR-003 Shared UI System Module]].
+- Phone OTP is primary login; email is optional. OTP session is the reusable [[requirements/AUTH-CORE Phone OTP Session]] module; doctor/customer roles are the Srasveda adapter [[requirements/AUTH-001 Account Provisioning and Role Activation]].
 - Admin may pre-provision doctor accounts; self-service mobile OTP creates a customer account by default until an authorised role promotion/verification occurs.
+- Hosted payment is the reusable [[requirements/PAY-CORE Hosted Payment Adapter]] module; packing and WhatsApp wait on Srasveda’s [[requirements/PAY-001 Verified Online Payment]] adapter.
 - Patient medical records are out of scope.
 - Customers can order directly at Srasveda-controlled prices; consultation routing is optional and does not expose a public partner directory.
 - Heritage communication is evidence-led: “Founded in 1998” is displayed only with approved source evidence and claim review.
 - Routine product media, approved content and controlled theme settings are managed from admin; they do not require a code deployment.
 - Official social profiles, share links and approved social content are centrally managed; automated publishing is optional and follows platform approval/credentials.
 - Every build feature is an isolated vertical slice with a harness: requirements, permission rules, test data, automated tests, observable events and release checks.
-- Payment, doctor login and distributor portal need their own specifications; build order is not yet approved.
+- Distributor portal still needs its own specification; build order is not yet approved.
 
 ## Work in order
 

@@ -14,8 +14,9 @@ flowchart TD
   E --> F[Packed]
   F --> G[Dispatched]
   G --> H[Delivered]
-  H --> I[After-sales path only if needed]
-  I --> J[Return / refund events]
+  H --> I[After-sales only via ORD-004]
+  I --> J[Admin accept/reject]
+  J --> K[If payout due: ops pays, then records refunded]
 
   C --> W[Queue one approved WhatsApp status update]
   D --> W
@@ -23,8 +24,8 @@ flowchart TD
   F --> W
   G --> W
   H --> W
-  J --> W
+  K --> W
   W --> K[Record send/delivery result without changing order stage]
 ```
 
-Each status is an append-only event with source evidence. The WhatsApp update reflects the event; it never creates the event.
+Each status is an append-only event with source evidence. The WhatsApp update reflects the event; it never creates the event. A customer/doctor request is not an order stage — see [[workflows/WF-ORD-004 Manual After-sales]].

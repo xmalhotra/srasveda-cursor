@@ -3,6 +3,7 @@ type: screen-spec
 id: UI-ADM-002
 status: draft
 roles: [admin, operations]
+figma: https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=50-3075
 ---
 
 # UI-ADM-002 — Admin Doctor Onboarding and Journey Setup
@@ -68,6 +69,17 @@ This is a preview of approved business rules, not a medical care plan.
 - Free-text sample quantities, unapproved SKU selection, hidden automation conditions or removal of audit history.
 - MR editing of commercial/sampling/checkpoint policy from their field workspace.
 - Automatic activation based only on an MR-created doctor record.
+
+## Designed states
+
+Mobile splits this into two focused tasks plus a conflict state, same chrome as Log visit:
+
+| State | Frame |
+| --- | --- |
+| Network | [Network](https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=50-3002) |
+| Identity and ownership | [Onboarding](https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=50-3075) |
+| Journey review | [Onboarding — review](https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=50-3122) |
+| Mobile conflict | [Onboarding — conflict](https://www.figma.com/design/YITNo7Xfit8BR5FIa3hPcF?node-id=50-3190) |
 
 ## Links
 
